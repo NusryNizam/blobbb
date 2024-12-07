@@ -7,8 +7,35 @@ body {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   padding: 10px;
+  margin-top: 1rem;
+  margin-inline: auto;
+  max-width: 400px;
 }
 
-p {
-  margin-block-end: 0.75rem;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.spacer-8 {
+  height: 8px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+input[type="range"] {
+  margin-top: -4px;
+  width: 100%;
+}
+
+[data-theme="light"] .range {
+  accent-color: var(--la-primary);
+}
+[data-theme="dark"] .range {
+  accent-color: var(--da-primary);
 }

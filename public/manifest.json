@@ -1,6 +1,7 @@
 {
-  "name": "Penpot starter plugin",
+  "name": "Blobbb",
   "code": "plugin.js",
-  "description": "This is a starter plugin for Penpot",
-  "permissions": ["content:read", "content:write"]
+  "icon": "/icon.png",
+  "description": "Generate SVG blobs for your designs",
+  "permissions": ["content:write"]
 }

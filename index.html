@@ -3,22 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Penpot plugin example</title>
+    <title>Blobbb - Random Blob Generator</title>
   </head>
   <body>
-    <p>Penpot plugin starter template</p>
+    <div class="wrapper">
+      <div class="blob-container"></div>
+      <div>
+        <div class="form-group">
+          <label class="input-label caption" for="extraPoints"
+            >Extra Nodes</label
+          >
+          <input
+            class="input range"
+            type="range"
+            id="extraPoints"
+            value="8"
+            min="0"
+            max="20"
+          />
+        </div>
 
-    <p>
-      Checkout the
-      <a target="_blank" href="https://help.penpot.app/plugins/"
-        >documentation</a
-      >
-      to get started.
-    </p>
+        <div class="form-group">
+          <label class="input-label caption" for="randomness">Randomness</label>
+          <input
+            class="input range"
+            type="range"
+            id="randomness"
+            value="4"
+            min="0"
+            max="20"
+          />
+        </div>
+        <div class="spacer-8"></div>
 
-    <button type="button" data-appearance="primary" data-handler="create-text">
-      Create text
-    </button>
+        <div class="button-container">
+          <button
+            type="button"
+            data-appearance="secondary"
+            data-handler="generate"
+          >
+            Generate
+          </button>
+          <button type="button" data-appearance="primary" data-handler="insert">
+            Insert
+          </button>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -1,14 +1,15 @@
-penpot.ui.open("Penpot plugin starter template", `?theme=${penpot.theme}`);
+penpot.ui.open("Blobbb", `?theme=${penpot.theme}`, {
+  width: 400,
+  height: 240,
+});
 
-penpot.ui.onMessage<string>((message) => {
-  if (message === "create-text") {
-    const text = penpot.createText("Hello world!");
+penpot.ui.onMessage<{ type: string; data: any }>((message) => {
+  if (message.type === "insert") {
+    const shape = penpot.createShapeFromSvg(message.data);
 
-    if (text) {
-      text.x = penpot.viewport.center.x;
-      text.y = penpot.viewport.center.y;
-
-      penpot.selection = [text];
+    if (shape) {
+      shape.x = penpot.viewport.center.x;
+      shape.y = penpot.viewport.center.y;
     }
   }
 });
